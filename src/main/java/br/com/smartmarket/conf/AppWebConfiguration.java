@@ -7,9 +7,10 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import br.com.smartmarket.controller.HomeController;
 import br.com.smartmarket.controller.ProdutoController;
+import br.com.smartmarket.dao.ProdutoDao;
 
 @EnableWebMvc
-@ComponentScan(basePackageClasses = { HomeController.class, ProdutoController.class })
+@ComponentScan(basePackageClasses = { HomeController.class, ProdutoController.class, ProdutoDao.class })
 public class AppWebConfiguration {
 
 	@Bean
