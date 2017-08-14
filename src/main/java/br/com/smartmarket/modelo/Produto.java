@@ -1,5 +1,9 @@
 package br.com.smartmarket.modelo;
 
+
+import java.math.BigDecimal;
+
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +17,8 @@ public class Produto {
 	private String produto;
 	private String categoria;
 	private int quantidade;
+	
+	private BigDecimal preco;
 	
 	
 	public String getProduto() {
@@ -33,12 +39,19 @@ public class Produto {
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
+
 	
 	
-	 @Override
-	    public String toString() {
-	        return "Produto [Produto=" + produto + ","
-	        		+ " categoria=" + categoria + ", quantidade=" + quantidade + "]";
-	    }
+	@Override
+	public String toString() {
+		return "Produto [Produto=" + produto + "," + " categoria=" + categoria + ", quantidade=" + quantidade + "]";
+	}
+	public BigDecimal getPreco() {
+		return preco;
+	}
+	public void setPreco(BigDecimal preco) {
+		this.preco = preco;
+	}
+
 
 }
